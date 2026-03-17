@@ -63,9 +63,9 @@ function showStudents() {
   console.log("-----------------------------------------");
 
   let averageGrade = 0;
-  studentsDB.map((e) => {
-    return (averageGrade += e[2]);
-  });
+  for (const student of studentsDB){
+    averageGrade+= student[2]
+  }
 
   console.log((averageGrade / studentsDB.length).toFixed(2));
 }
